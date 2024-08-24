@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types'; //  PropTypes
 import './DropdownMenu.css'; 
 
 function DropdownMenu({ navigate }) {
     const [isOpen, setIsOpen] = useState(false);
-
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
@@ -22,5 +22,9 @@ function DropdownMenu({ navigate }) {
         </div>
     );
 }
+
+DropdownMenu.propTypes = {
+    navigate: PropTypes.func.isRequired, // PropTypes 
+};
 
 export default DropdownMenu;

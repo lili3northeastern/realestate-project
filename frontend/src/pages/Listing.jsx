@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types'; // PropTypes
 import './Listing.css';
 
 function Listing({ onPropertySelect }) {
@@ -14,14 +15,11 @@ function Listing({ onPropertySelect }) {
         { id: 3, title: "890 Shaw Dr, Fremont CA 94536", price: "$2,800,000", description: "5b3b SFH, 2300 sq ft, 9000 sq ft lot", image: "images/property3.jpg", detailedDescription:"Discover this exceptional 5-bedroom, 3-bathroom home that presents a perfect investment opportunity for those seeking a property designed for multigenerational living or potential rentals. Currently generating a total rent of $6,500, this property showcases its earning potential with each of the three wings occupied by separate tenants, emphasizing privacy and convenience. The main house features a modern kitchen with granite countertops, a dining room illuminated by a skylight, a large living room with granite-topped cabinets and a wet bar, alongside three bedrooms and a bathroom. The West wing's master suite provides solitude with its own bathroom, a second living room with a skylight, and a kitchenette for independent living. The North wing offers a junior suite with a separate entrance, making it ideal for extended family or as a rental opportunity. Outdoors, the property boasts a deck, an abundance of citrus trees, and a spacious shed with electricity, perfect for entertainment or hobbies. Located in a sought-after area close to shopping and schools, this versatile home combines functionality with the potential for customization, making it an attractive option for investors or families desiring a space that meets everyone's needs." },
     ];
 
- 
     const handleFilterChange = (e) => {
         setFilterPrice(e.target.value);
     };
 
- 
     const filteredProperties = properties.filter(property => {
-
         const price = Number(property.price.replace(/[$,]/g, ''));
         return filterPrice === '' || price <= filterPrice;
     });
@@ -49,5 +47,9 @@ function Listing({ onPropertySelect }) {
         </div>
     );
 }
+
+Listing.propTypes = {
+    onPropertySelect: PropTypes.func.isRequired,  //  PropTypes 
+};
 
 export default Listing;

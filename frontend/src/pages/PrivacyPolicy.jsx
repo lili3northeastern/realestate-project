@@ -5,7 +5,7 @@ function PrivacyPolicy() {
     return (
         <div className="privacy-policy-container">
             <h1>Privacy Policy</h1>
-            <p>Customer service is very important to all of us. As we continue to improve and expand our services, we recognize our customers' need and desire to preserve their privacy and confidentiality. Safeguarding our customers' privacy is also very important to us. We have adopted standards that help maintain and preserve the confidentiality of customers' nonpublic personal information. The following Statement affirms our continued efforts to safeguard customer information.</p>
+            <p>Customer service is very important to all of us. As we continue to improve and expand our services, we recognize our customers&apos; need and desire to preserve their privacy and confidentiality. Safeguarding our customers&apos; privacy is also very important to us. We have adopted standards that help maintain and preserve the confidentiality of customers&apos; nonpublic personal information. The following Statement affirms our continued efforts to safeguard customer information.</p>
             <h2>Information We Collect</h2>
             <p>We gather nonpublic personal information about our customers as may be necessary to conduct business with our customers. We collect nonpublic personal information about you from the following sources:</p>
             <ul>

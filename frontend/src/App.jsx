@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import './App.css';
+import PropertyList from './components/PropertyList';
 
 function App() {
     const [theme, setTheme] = useState('light');
@@ -47,6 +48,10 @@ function App() {
             {currentPage === 'PrivacyPolicy' && <PrivacyPolicy />}
 
             <Footer onNavigate={navigate} />
+
+        
+            <PropertyList /> {}
+    
         </div>
     );
 }

@@ -1,5 +1,6 @@
-
 import './Footer.css';
+import PropTypes from 'prop-types'; // PropTypes
+
 function Footer({ onNavigate }) {
     return (
         <footer className="footer"> 
@@ -16,4 +17,9 @@ function Footer({ onNavigate }) {
         </footer>
     );
 }
+
+Footer.propTypes = {
+    onNavigate: PropTypes.func.isRequired, //  PropTypes 
+};
+
 export default Footer;

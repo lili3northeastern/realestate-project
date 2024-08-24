@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types'; //  PropTypes
 import './Detail.css';
 
 function Detail({ property, onBack }) {
@@ -19,5 +20,16 @@ function Detail({ property, onBack }) {
         </div>
     );
 }
+
+Detail.propTypes = {
+    property: PropTypes.shape({  //  property 
+        title: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        description: PropTypes.string.isRequired,
+        detailedDescription: PropTypes.string.isRequired,
+    }).isRequired,
+    onBack: PropTypes.func.isRequired,  //  onBack 
+};
 
 export default Detail;
